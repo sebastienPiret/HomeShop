@@ -2,7 +2,7 @@ package be.w3Do.shop;
 
 import java.lang.String;
 
-public class Product {
+public abstract class Product {
     private String name;
     private String description;
     private double price;
@@ -17,7 +17,7 @@ public class Product {
      * Display a full description of the product
      */
     public void look(){
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     /**
@@ -25,9 +25,7 @@ public class Product {
      * @param bill the concerned bill
      * @param quantity the quantity to add
      */
-    public void buy(Bill bill,Integer quantity){
-
-    }
+    public abstract void buy(Bill bill,Integer quantity);
 
     public String getName() {
         return name;
