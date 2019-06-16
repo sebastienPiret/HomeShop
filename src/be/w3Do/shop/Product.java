@@ -1,15 +1,23 @@
 package be.w3Do.shop;
 
+import java.lang.String;
+
 public class Product {
     private String name;
     private String description;
     private double price;
 
+    public Product(String name,String descr,double price){
+        this.name=name;
+        this.description=descr;
+        this.price=price;
+    }
+
     /**
      * Display a full description of the product
      */
     public void look(){
-
+        System.out.println(this.toString());
     }
 
     /**
@@ -35,5 +43,12 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString(){
+        //StringBuffer sb=new StringBuffer().append(name).append(" : ").append(price).append("/n").append(description);
+        return new StringBuffer(name).append(" : ").append(price).append("\n").append(description).toString();
+        //return "test";
     }
 }

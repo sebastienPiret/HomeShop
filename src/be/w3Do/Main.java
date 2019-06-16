@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Product product=new Product();
+        Product product=new Product("ordi","belle béte",1000);
+        System.out.println(product.toString());
 
     }
 }

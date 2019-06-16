@@ -2,13 +2,18 @@ package be.w3Do.shop;
 
 public class Customer {
     private String fullName;
-    private String adress;
+    private String address;
+
+    public Customer(String name,String address){
+        this.fullName=name;
+        this.address=address;
+    }
 
     public String getFullName() {
         return fullName;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 }
